@@ -1,1 +1,1 @@
-# builders/odd_builder.py: Lógica para construir cuadrados impares.
+    # builders/odd_builder.py: Lógica para construir cuadrados impares.
