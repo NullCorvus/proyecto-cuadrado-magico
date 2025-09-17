@@ -23,18 +23,39 @@ class MagicSquare:
     def validate(self) -> bool:
         """
         Verifica si la matriz cumple con las condiciones de un cuadrado mágico.
-        Debe sumar las filas, columnas y las dos diagonales principales.
-        Retorna True si es mágico, False si no lo es.
+        Imprime las sumas de filas, columnas y diagonales.
         """
-        # --- Lógica de validación que debes implementar ---
-        # 1. Sumar cada fila y comprobar si es igual a self.magic_constant.
-        # 2. Sumar cada columna y comprobar.
-        # 3. Sumar la diagonal principal y comprobar.
-        # 4. Sumar la diagonal secundaria y comprobar.
+        print(f"\nConstante mágica esperada: {self.magic_constant}\n")
 
-        print(f"Validando... La suma debería ser {self.magic_constant}")
-        # Por ahora, devolvemos True. Deberás completar la lógica.
+        # Validar filas
+        for i, fila in enumerate(self.matrix):
+            suma_fila = sum(fila)
+            print(f"Suma fila {i+1}: {suma_fila}")
+            if suma_fila != self.magic_constant:
+                return False
+
+        # Validar columnas
+        for j in range(self.n):
+            suma_col = sum(self.matrix[i][j] for i in range(self.n))
+            print(f"Suma columna {j+1}: {suma_col}")
+            if suma_col != self.magic_constant:
+                return False
+
+        # Diagonal principal
+        suma_diag1 = sum(self.matrix[i][i] for i in range(self.n))
+        print(f"Suma diagonal principal: {suma_diag1}")
+        if suma_diag1 != self.magic_constant:
+            return False
+
+        # Diagonal secundaria
+        suma_diag2 = sum(self.matrix[i][self.n - 1 - i] for i in range(self.n))
+        print(f"Suma diagonal secundaria: {suma_diag2}")
+        if suma_diag2 != self.magic_constant:
+            return False
+
         return True
+
+
 
     def __str__(self) -> str:
         """

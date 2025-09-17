@@ -39,4 +39,5 @@ class OddMagicSquareBuilder(MagicSquareBuilder):
 
         # --- PASO 3: Devolver el objeto 'square' ya rellenado ---
         return square
-
+    
+    
