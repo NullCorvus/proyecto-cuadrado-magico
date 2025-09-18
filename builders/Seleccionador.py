@@ -12,7 +12,7 @@ class Seleccionador:
         elif n % 4 == 0:
             # Método para pares dobles (n divisible entre 4)
             even = EvenMagicSquareBuilder()
-            return even.build(n)
+            return even.doublebuild(n)
         
         elif n % 2 == 0 and n % 4 != 0:
             # Método para pares simples (los verdes)
