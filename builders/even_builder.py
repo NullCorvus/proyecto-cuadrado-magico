@@ -102,7 +102,7 @@ class EvenMagicSquareBuilder:
                     square.matrix[i][j] = square.matrix[i + k][j]
                     square.matrix[i + k][j] = temp
             
-            # --- Intercambio Derecho (C <-> B) ---
+            # --- Intercambio Derecho (C <-> B) --
             fila_central = k // 2
             for i in range(k):
                 if i != fila_central:
