@@ -16,8 +16,8 @@ class Seleccionador:
         
         elif n % 2 == 0 and n % 4 != 0:
             # Método para pares simples (los verdes)
-            green = EvenMagicSquareBuilder()
-            return green.build(n)
+            even  = EvenMagicSquareBuilder()
+            return even.singlebuild(n)
         
         else:
             raise ValueError("El tamaño ingresado no es válido para construir un cuadrado mágico")
