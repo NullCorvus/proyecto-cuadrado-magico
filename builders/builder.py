@@ -1,4 +1,4 @@
-# builders/builder.py: Plantilla padre abstracta MagicSquareBuilder.
+# builders/builder.py: 
 from abc import ABC, abstractmethod
 from magic_square import MagicSquare
 @abstractmethod

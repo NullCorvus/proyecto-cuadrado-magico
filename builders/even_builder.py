@@ -1,4 +1,3 @@
-# builders/double_even_builder.py  (versión que sigue tu imagen)
 
 from magic_square import MagicSquare
 from builders.odd_builder import OddMagicSquareBuilder
@@ -21,8 +20,8 @@ class EvenMagicSquareBuilder:
                         for j in range(bj * b, bj * b + b):
                             marked[i][j] = True
 
-        # 1) colocar números en celdas marcadas (en orden natural)
-        used = []   # ahora usamos lista
+        # colocar números en celdas marcadas (en orden natural)
+        used = []   #usamos lista
         for k in range(1, n * n + 1):
             i = (k - 1) // n
             j = (k - 1) % n
@@ -30,10 +29,10 @@ class EvenMagicSquareBuilder:
                 square.matrix[i][j] = k
                 used.append(k)
 
-        # 2) rellenar celdas vacías con los números restantes en orden descendente SIN sort
+        # rellenar celdas vacías con los números restantes en orden descendente 
         unused = []
         for k in range(1, n * n + 1):
-             if k not in used:    # comprobamos uno por uno
+             if k not in used:    #comprobuea uno por uno
                  unused.append(k)
 
         idx = len(unused) - 1
